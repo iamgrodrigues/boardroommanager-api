@@ -2,12 +2,10 @@ package com.iamgrodrigues.boardroommanagerapi.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 public class ErrorDetails {
 

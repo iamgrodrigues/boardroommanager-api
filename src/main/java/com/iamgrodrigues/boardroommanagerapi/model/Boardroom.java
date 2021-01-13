@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name="boardroom")
+@Table(name = "boardroom")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -17,16 +17,15 @@ public class Boardroom {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "date", nullable = false)
     private String date;
 
-    @Column(nullable = false)
-    private String starHour;
+    @Column(name = "startHour", nullable = false)
+    private String startHour;
 
-    @Column(nullable = false)
+    @Column(name = "endHour", nullable = false)
     private String endHour;
 }
-
