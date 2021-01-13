@@ -27,7 +27,7 @@ public class BoardroomController {
     }
 
     @GetMapping("/boardrooms/{id}")
-    public ResponseEntity < Boardroom > getBoardroomById(@PathVariable(value = "id") Long boardroomId)
+    public ResponseEntity <Boardroom> getBoardroomById(@PathVariable(value = "id") Long boardroomId)
             throws ResourceNotFoundException {
         Boardroom boardroom = boardroomRepository.findById(boardroomId)
                 .orElseThrow(() -> new ResourceNotFoundException("Boardroom not found :: " + boardroomId));
@@ -40,7 +40,7 @@ public class BoardroomController {
     }
 
     @PutMapping("/boardrooms/{id}")
-    public ResponseEntity < Boardroom > updateBoardroom(@PathVariable(value = "id") Long boardroomId,
+    public ResponseEntity <Boardroom> updateBoardroom(@PathVariable(value = "id") Long boardroomId,
                                               @Valid @RequestBody Boardroom roomDetails) throws ResourceNotFoundException {
         Boardroom boardroom = boardroomRepository.findById(boardroomId)
                 .orElseThrow(() -> new ResourceNotFoundException("Boardroom not found for this id :: " + boardroomId));
@@ -60,7 +60,7 @@ public class BoardroomController {
                 .orElseThrow(() -> new ResourceNotFoundException("Boardroom not found for this id :: " + boardroomId));
 
         boardroomRepository.delete(boardroom);
-        Map< String, Boolean > response = new HashMap< >();
+        Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
         return response;
     }
