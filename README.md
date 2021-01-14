@@ -85,7 +85,7 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 ```shell
 mvn spring-boot:run
 ```
-Afeter the above command, you can navigate to the following address to see the project up and runnig:
+After the above command, you can navigate to the following address to see the project up and runnig:
 
 ```shell
 http://localhost:8082/api/v1/people
